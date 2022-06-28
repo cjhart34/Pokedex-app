@@ -1,0 +1,52 @@
+* {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  
+  
+  body{
+     font-family: 'Lato', sans-serif;
+     font-weight: 500;
+     font-size: 15px;
+     text-transform: capitalize;
+     line-height: 25px;
+     padding-top: 22px;
+     min-height: 100vh;
+     background-color: #ffffff;
+     
+  }
+  
+  h1 {
+    font-size: 30px;
+    line-height: 42px;
+    padding-left: 30px;
+    text-align: center;
+  }
+  
+  input {
+    max-width: 300px;
+  
+  }
+  
+  .pokemon-list {
+    width: 500px;
+    max-width: 80vw;
+    list-style-type: none;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .special {
+    font-size: 22px;
+    font-weight: 700;
+    color: #05676e;
+  }
+  
+  @media (max-width: 400px) {
+    h1 {
+      font-size: 30px;
+    }
+    input {
+      max-width: 200px;
+    }
+  }
