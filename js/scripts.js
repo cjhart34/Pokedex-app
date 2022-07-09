@@ -1,45 +1,60 @@
  let pokemonRepository = (function() {
 
- 
     let pokemonList = [
             {name: 'Geodude', 
             height: 0.4, 
-            type: ["Rock", "Ground"]},
+            type: ['Rock', 'Ground']},
 
             {name: 'Graveler',
              height: 1, 
-             type: ["Rock", "Ground"]},
+             type: ['Rock', 'Ground']},
 
             {name: 'Golem', 
             height: 1.4, 
-            type: ["Rock", "Ground"]}
+            type: ['Rock', 'Ground']}
         ];
 
     function add(pokemon) {
-        pokemonList.push(pokemon);
+        //  tests if the item being added is a Pokemon
+        if (typeof(pokemon) !== 'object'){
+        console.log('This is not a Pokemon');
+        } else {
+            pokemonList.push(pokemon);
+        }
+    
+    }
+
+    function showDetails(pokemon){
+        console.log(pokemon);
     }
 
     function getAll() {
         return pokemonList;
     }
-
+    function addListItem(pokemon){
+        let pokemonList = document.querySelector('.pokemon-list');
+        let listPokemon = document.createElement('li');
+        let button = document.createElement('button');
+        button.innerText = pokemon.name;
+        button.classList.add('button-class');
+        listPokemon.appendChild(button);
+        pokemonList.appendChild(listPokemon);
+        button.addEventListener('click', function () {
+            showDetails(pokemon)
+            });
+    }
     return {
         add: add,
-        getAll: getAll
+        getAll: getAll,
+        addListItem: addListItem
     };
 })();
 
-let pokemonList = pokemonRepository.getAll();
+pokemonRepository.add({name: 'Pikachu', height: 0.3, type: ['Electric'] });
 
-pokemonList.forEach(function (pokemon) {
-    if (pokemon.height >= 1) {
-        document.write(`Name: ${pokemon.name} Height: ${pokemon.height} -- Wow! That\'s a big Pokemon!<br>`)
-    } else if (pokemon.height > 1 && pokemon.height < 0.5) {
-        document.write(`Name: ${pokemon.name} Height: ${pokemon.height} -- That\'s an average Pokemon. <br>`)
-    }
-    else {
-        document.write(`Name: ${pokemon.name} Height: ${pokemon.height} --That\'s a small Pokemon.<br>`)
-    }
-})
+console.log(pokemonRepository.getAll());
 
+pokemonRepository.getAll().forEach(function (pokemon) {
+  pokemonRepository.addListItem(pokemon)
+});
 
