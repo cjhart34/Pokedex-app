@@ -33,11 +33,15 @@
   }
   
   .pokemon-list {
-    width: 500px;
-    max-width: 80vw;
+    /* width: 500px; */
+    /* max-width: 80vw; */
     list-style-type: none;
-    margin: 0 auto;
     text-align: center;
+    box-sizing: border-box;
+    box-shadow: rgba(0, 0, 0, 0.5) 1px 2px 4px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .special {
@@ -71,4 +75,8 @@
     background-color: white;
     color: black;
     border: 2px solid #4caf50;
+  }
+
+  .pokemon-list > li {
+    width: 200px;
   }
