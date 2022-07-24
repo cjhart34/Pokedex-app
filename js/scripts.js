@@ -1,7 +1,7 @@
  let pokemonRepository = (function() {
     //IIFE
     let pokemonList = [];
-    let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
+    let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=898';
 
     function add(pokemon) {
         //  tests if the item being added is a Pokemon...is not working for me, if I comment this in, it makes it so no Pokemon load in the browser.
@@ -45,7 +45,7 @@
                     detailsUrl: item.url
                 };
                 add(pokemon);
-                // console.log(pokemon);
+                // console.log(JSON.stringify(pokemon));
             });
         }).catch(function (e) {
             console.error(e);
@@ -59,6 +59,9 @@
             item.imageUrl = details.sprites.front_default;
             item.height = details.height;
             item.types = details.types;
+            item.weight = details.weight;
+            item.id = details.id
+            item.abilities = details.abilities;
         }).catch(function (e) {
             console.error(e);
         });
@@ -81,13 +84,15 @@
         let closeButtonElement = document.createElement('button');
         closeButtonElement.classList.add('modal-close');
         // closeButtonElement.innerText = 'Close';
+        closeButtonElement.setAttribute('title', 'Close');
+        closeButtonElement.innerText = 'x';
         closeButtonElement.addEventListener('click', hideModal);
         
         let titleElement = document.createElement('h1');
         titleElement.innerText = pokemon.name;
 
         let contentElement = document.createElement('p');
-        contentElement.innerHTML = "Height: "+pokemon.height+"<br>";
+        contentElement.innerHTML = "Pokédex Number: " + pokemon.id + "<br>" + "Height: "+pokemon.height+"<br>" + "Weight: " + pokemon.weight + "<br>";
 
         let imageElement = document.createElement('img');
         imageElement.classList.add('pokemon-image');
@@ -157,5 +162,3 @@ pokemonRepository.loadList().then(function() {
         pokemonRepository.addListItem(pokemon)
     });
 });
-
-
