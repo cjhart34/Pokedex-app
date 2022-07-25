@@ -22,6 +22,10 @@
         return pokemonList;
     }
 
+    function search(pokemonName) {
+        return pokemonList.filter(pokemon => pokemon.name === pokemonName);
+    }
+
     function addListItem(pokemon){
         let pokemonList = document.querySelector('.pokemon-list');
         let listPokemon = document.createElement('li');
@@ -56,12 +60,12 @@
         return fetch(url).then(function (response) {
             return response.json();
         }).then(function (details) {
-            item.imageUrl = details.sprites.front_default;
+            item.imageUrl = details.sprites.other.dream_world.front_default;
             item.height = details.height;
             item.types = details.types;
             item.weight = details.weight;
             item.id = details.id
-            item.abilities = details.abilities;
+            item.abilities = details.abilities = pokemon.abilities;
         }).catch(function (e) {
             console.error(e);
         });
@@ -140,6 +144,8 @@
         if (e.key === 'Escape' && modalContainer.classList.contains('is-visible')) {
             hideModal();
         }
+
+        
     });
 
     return {
@@ -147,7 +153,8 @@
         getAll: getAll,
         addListItem: addListItem,
         loadList: loadList,
-        loadDetails: loadDetails
+        loadDetails: loadDetails,
+        search: search
     };
 
 })();
