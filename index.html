@@ -6,10 +6,23 @@
         <title>Pokédex App</title>
         <link rel="shortcut icon" href="img/pokeball.png"/>
         <link rel="stylesheet" type="text/css" href="css/styles.css">
+        <link href="http://fonts.cdnfonts.com/css/silkscreen" rel="stylesheet">
     </head>
-    <header><img src="img/logo.png" alt="pokemon-logo" class="logo" width="150"> </header>
+    <header>
+        <img src="img/logo.png" alt="pokemon-logo" class="logo" width="150"> 
+        <nav class="navbar sticky-top justify-content-center navbar-dark bg-dark">
+            <div class="row">
+              <div class="col">
+              </div>
+                <form>
+                  <input class="form-control" id="poke-search" type="search" placeholder="Search" aria-label="Search"/>
+                </form>
+              </div>
+            </nav>
+    </header>
+    <hr>
     <body>
-        <h1>Pokédex</h1>
+        <h1></h1>
         <p> </p>
         <ul class='pokemon-list'></ul>
         <div id="modal-container"></div>
