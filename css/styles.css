@@ -32,6 +32,7 @@
     background-color: black;
     font-weight: 500;
     font-size: 15px;
+    border-radius: 10px;
   }
 
   body {
@@ -85,6 +86,7 @@
     background-color: lightgrey;
     border: 3px solid #f00000;
     text-transform: capitalize;
+    border-radius: 15px;
 
   }
   
@@ -108,7 +110,7 @@
     border-radius: 50%;
     cursor: pointer;
 	  opacity: 0.8;
-	  zoom: 1.2;
+	  /* zoom: 1.2; */
   }
   
   #modal-container {
@@ -194,7 +196,7 @@
   .button-class:hover {
     cursor: pointer;
     opacity: 0.9;
-    zoom: 1.1;
+    /* zoom: 1.1; */
     outline: 3px solid black;
     transition-duration: 0.5s;
   }
