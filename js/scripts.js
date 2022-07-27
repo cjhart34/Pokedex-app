@@ -115,27 +115,29 @@ let pokemonRepository = (function () {
     });
   });
   
-  //search function
-  // function searchFunction(event) {
-  //   let pokemonNames = document.getElementsByClassName('pokemonButton');
-  //   let { value } = event.target;
-  //   let searchQuery = value.toLowerCase();
-  //   for (let pokemonName of pokemonNames) {
-  //     let name = pokemonName.textContent.toLowerCase();
-  //     if (name.includes(searchQuery)) {
-  //       pokemonName.closest('li').style.display = 'inline-block';
-  //     } else {
-  //       pokemonName.closest('li').style.display = 'none';
-  //     }
-  //   }
-  // }
+//   search function
+  function searchFunction(event) {
+    let pokemonNames = document.getElementsByClassName('pokemonButton');
+    let { value } = event.target;
+    let searchQuery = value.toLowerCase();
+    for (let pokemonName of pokemonNames) {
+      let name = pokemonName.textContent.toLowerCase();
+      if (name.includes(searchQuery)) {
+        pokemonName.closest('li').style.display = 'inline-block';
+      } else {
+        pokemonName.closest('li').style.display = 'none';
+      }
+    }
+  }
+
+  let search = document.getElementById('poke-search');
   
   // let search = document.getElementById('search');
-  // search.addEventListener('keyup', searchFunction);
+  search.addEventListener('keyup', searchFunction);
 
-//   const search = document.getElementById("poke-search");
 
-// search.addEventListener("keyup", function (e) {
+
+// search.addEventListener('keyup', function (e) {
 //   const inputText = e.target.value; // Get the text typed by user
 //   console.log(inputText); // log the input text out
 // });
