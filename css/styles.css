@@ -26,6 +26,7 @@ ul {
   color: black;
   border-radius: 15px;
   font-family: 'Silkscreen', sans-serif;
+  font-family: 'Silkscreen Expanded', sans-serif;
 }
 .btn:hover {
   background-color: #f00000;
