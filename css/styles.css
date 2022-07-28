@@ -26,7 +26,7 @@ ul {
   color: black;
   border-radius: 15px;
   @font-face {
-    font-family: 'MyWebFont';
+    font-family: 'Silkscreen';
     src: url('silkscreen_normal_macroman/slkscr-webfont.eot'); /* IE9 Compat Modes */
     src: url('silkscreen_normal_macroman/slkscr-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
          url('silkscreen_normal_macroman/slkscr-webfont.woff') format('woff'), /* Pretty Modern Browsers */
@@ -34,7 +34,6 @@ ul {
          url('silkscreen_normal_macroman/slkscr-webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
   };
   font-family: 'Silkscreen', sans-serif;
-  font-family: 'Silkscreen Expanded', sans-serif;
 }
 .btn:hover {
   background-color: #f00000;
