@@ -14,7 +14,7 @@ ul {
 .btn {
   background-color: #ffcb05;
   text-align: center;
-  font-size: 22px;
+  font-size: 13px;
   vertical-align: auto;
   -webkit-transition-duration: 0.4s;
   transition-duration: 0.4s;
@@ -25,15 +25,7 @@ ul {
   height: 50px;
   color: black;
   border-radius: 15px;
-  @font-face {
-    font-family: 'Silkscreen';
-    src: url('silkscreen_normal_macroman/slkscr-webfont.eot'); /* IE9 Compat Modes */
-    src: url('silkscreen_normal_macroman/slkscr-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-         url('silkscreen_normal_macroman/slkscr-webfont.woff') format('woff'), /* Pretty Modern Browsers */
-         url('silkscreen_normal_macroman/slkscr-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
-         url('silkscreen_normal_macroman/slkscr-webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
-  };
-  font-family: 'Silkscreen', sans-serif;
+  font-family: 'Press Start 2P', sans-serif;
 }
 .btn:hover {
   background-color: #f00000;
