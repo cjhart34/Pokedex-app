@@ -27,6 +27,7 @@ ul {
   border-radius: 15px;
   font-family: 'Press Start 2P', sans-serif;
 }
+
 .btn:hover {
   background-color: #f00000;
   color: white;
