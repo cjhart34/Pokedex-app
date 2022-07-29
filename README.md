@@ -1,5 +1,5 @@
 # <img src=./img/pokeball.png width=25 height=25> Pokédex Project <img src=./img/pokeball.png width=25 height=25>
-by Corey Harthoorn July 2022
+by Corey Harthoorn / July 2022
 
 ---
 ## About 
