@@ -19,7 +19,7 @@ ul {
   -webkit-transition-duration: 0.4s;
   transition-duration: 0.4s;
   cursor: pointer;
-  border: 2.5px solid #f00000;
+  border: 5px inset #f00000;
   width: 100%;
   max-width: 512px;
   height: 50px;
